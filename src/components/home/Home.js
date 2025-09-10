@@ -3,9 +3,15 @@ import React, { Component } from 'react'
 export default class Home extends Component {
   render() {
     return (
-        <section id="home" className='mt-16 md:mt-[7rem] lg:mt-[10rem] '>
+        <section id="home" className=' mt-16 md:mt-[7rem] lg:mt-[10rem] '>
             <div className='container'>
                 <div className='flex flex-col gap-[5rem] md:gap-0 md:flex-row '>
+                    {/* blob-1 */}
+                    <div className=' hidden md:block absolute w-64 h-64 bg-green-500 blur-3xl opacity-40 left-1/2 top-1/4 '>
+                    </div> 
+                    {/* blob-2 */}
+                    <div className='hidden md:block absolute w-64 h-64 bg-green-500 blur-3xl opacity-40 right-10 top-1/2 '>
+                    </div>
                     {/* content */}
                     <div className=' flex flex-col gap-5 w-full lg:w-[50%]'>
                         <h1>

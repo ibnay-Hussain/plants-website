@@ -4,7 +4,12 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jost: ['Jost', 'sans-serif'],
+        lobster: ['Lobster', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }

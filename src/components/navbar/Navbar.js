@@ -22,7 +22,7 @@ export default class Navbar extends Component {
     return (
       <div>
         <div className='fixed w-full top-0 left-0 z-50 h-16 sm:h-20'>
-          <nav id="navbar" className='flex items-center justify-between lg:justify-around px-4 py-3'>
+          <nav id="navbar" className='container flex items-center justify-between py-3'>
             <div className='text-3xl text-white'>Indoreplants</div>
             <div id="nav-menu" className={`absolute top-0 w-full min-h-[80vh] bg-green-950/80 z-30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${this.state.isOpen ? 'left-[0%]':'left-[-120%]'} lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}>
               <ul className='flex flex-col gap-8 lg:gap-10 items-center lg:flex-row'>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Home extends Component {
   render() {
     return (
-        <section id="home" className=' mt-16 md:mt-[7rem] lg:mt-[10rem] '>
+        <section id="home" className='  mt-16 md:mt-[7rem] lg:mt-[10rem] '>
             <div className='container'>
                 <div className='flex flex-col gap-[5rem] md:gap-0 md:flex-row '>
                     {/* blob-1 */}
@@ -25,7 +25,7 @@ export default class Home extends Component {
                         <p className='text-slate-300 font-lobster w-auto md:w-[20rem] lg:w-auto '>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione laboriosam voluptatum maiores velit expedita repellat non ducimus dolorem repellendus molestias, hic quidem voluptate architecto corrupti a, soluta ipsa libero ad.
                         </p>
-                        <div className='inline-flex flex-row gap-2 flex-row'>
+                        <div className='inline-flex flex-row gap-2'>
                             <button className='btn '>
                                 <span>Shop now</span>
                                 <i className='ri-leaf-line'></i>
@@ -47,8 +47,8 @@ export default class Home extends Component {
                     </div>
                     {/* image */}
                     <div className='relative w-full lg:w-[50%]'>
-                        <img src="assets/img/home.png" alt="home_image" className='w-full md:max-w-[400px] lg:max-w-[400px]  object-cover mx-auto' />
-                        <div className='absolute -top-10 -md:top-1 lg:-top-10 right-0 md:right-10 lg:right-0 opacity-30 animate-movingY animate-movingY'>
+                        <img src="assets/img/home.png" alt="home_image" className='w-full md:max-w-[400px] lg:max-w-[400px]  object-cover mx-auto transition-all hover:opacity-80 hover:scale-105 duration-500' />
+                        <div className='absolute -top-10 -md:top-1 lg:-top-10 right-0 md:right-10 lg:right-0 opacity-30 animate-movingY'>
                             <i className="ri-leaf-line text-6xl text-yellow-500"></i>
                         </div>
                         <div className='absolute bottom-0 md:bottom-10 lg:bottom-0 left-0 md:left-10 opacity-30 lg:left-0 animate-rotating'>

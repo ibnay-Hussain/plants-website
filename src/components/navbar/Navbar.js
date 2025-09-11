@@ -4,10 +4,26 @@ export default class Navbar extends Component {
   constructor(){
     super();
     this.state = {
-      isOpen: false
+      isOpen: false,
+      isScroll: false
     }
   }
+
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
   
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const isScrolled = window.scrollY > 50;
+    if (isScrolled !== this.state.isScroll) {
+      this.setState({ isScroll: isScrolled });
+    }
+  };
+
   toggleBtn = () => {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
@@ -21,10 +37,10 @@ export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <div className='fixed w-full top-0 left-0 z-50 h-16 sm:h-20'>
+        <div id="navbar_parent" className={`fixed w-full top-0 left-0 z-50 h-16 sm:h-20 transition-all duration-[700ms] ${this.state.isScroll ? 'bg-yellow-500' : 'bg-transparent'}`}>
           <nav id="navbar" className='container flex items-center justify-between py-3'>
-            <div className='text-3xl text-white'>Indoreplants</div>
-            <div id="nav-menu" className={`absolute top-0 w-full min-h-[80vh] bg-green-950/80 z-30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${this.state.isOpen ? 'left-[0%]':'left-[-120%]'} lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}>
+            <div className='text-3xl text-white font-medium'>Indoreplants</div>
+            <div id="nav-menu" className={`absolute top-0 w-full min-h-[80vh] bg-green-950/80 z-30 backdrop-blur-sm flex items-center justify-center transition-all duration-[500ms] ${this.state.isOpen ? 'left-[0%]':'left-[-120%]'} lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}>
               <ul className='flex flex-col gap-8 lg:gap-10 items-center lg:flex-row'>
                 <li className='text-2xl text-white'>
                   <a href="/" className="nav-link" onClick={this.closeMenu}>Home</a>

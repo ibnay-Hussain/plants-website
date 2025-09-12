@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class About extends Component {
     render() {
         return (
-            <div className='about-us  py-8 md:py-[2rem] relative overflow-hidden'>
+            <div className='about-us py-8 md:py-[2rem] relative overflow-hidden'>
                 <div>
                     <img className='w-[8rem] md:w-[10rem] absolute -top-2 -right-10 ' src="assets/img/leaf-3.png" alt="" />
                 </div>
@@ -32,7 +32,7 @@ export default class About extends Component {
                             <div className='flex flex-col md:flex-row-reverse items-center justify-between md:justify-center lg:justify-around'>
                                 {/* image */}
                                 <div className='flex items-center justify-center w-full sm:w-2/3 md:1/2 xl:w-2/3'>
-                                    <img className='w-full md:1/2 xl:w-2/3' src="assets/img/plant-1.png" alt="about_image" />
+                                    <img className='w-full md:1/2 xl:w-2/3' src="assets/img/plant-2.png" alt="about_image" />
                                 </div>
                                 {/* content */}
                                 <div className='w-full md:w-full xl:w-2/3'>

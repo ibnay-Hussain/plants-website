@@ -4,7 +4,7 @@ export default class Services extends Component {
   render() {
     return (
       <div>
-            <div className='bg-white text-green-900 py-10 mt-[9rem]'>
+            <div className='bg-white text-green-900 py-[3rem] lg:py-[7rem]  mt-[3rem] md:mt-[5rem]'>
                 <div className='container w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
                     {/* card 1 */}
                     <div className='border border-green-900 rounded-md p-5 hover:shadow-2xl hover:-translate-y-1 hover:bg-green-900 hover:text-white duration-300 cursor-pointer will-change-transform'>

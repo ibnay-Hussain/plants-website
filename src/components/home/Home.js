@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Home extends Component {
   render() {
     return (
-        <section id="home" className='  mt-16 md:mt-[7rem] lg:mt-[10rem] '>
+        <section id="home" className=' py-5 mt-16 md:mt-[7rem] lg:mt-[10rem] '>
             <div className='container'>
                 <div className='flex flex-col gap-[5rem] md:gap-0 md:flex-row '>
                     {/* blob-1 */}

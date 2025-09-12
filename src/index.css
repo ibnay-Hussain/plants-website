@@ -45,3 +45,10 @@ h2 {
 .title {
   @apply font-lobster text-yellow-500;
 }
+
+.swiper-pagination-bullet {
+  background-color: #22c55e !important; /* Tailwind green-500 */
+  width: 0.75rem !important; /* w-3 = 12px */
+  height: 0.75rem !important; /* h-3 = 12px */
+  border-radius: 9999px !important; /* rounded-full */
+}

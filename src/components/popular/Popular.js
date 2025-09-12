@@ -10,7 +10,7 @@ export default class Popular extends Component {
                             <h1 className='title'>Your Choice Plant</h1>
                             <p className='font-lobster text-slate-300'>Follow instructions for more</p>
                         </div>
-                        <div className='mt-36 md:mt-24 lg:mt-36 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-36 lg:gap-8'>
+                        <div className='mt-24 lg:my-36 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-48 lg:gap-8'>
                             {/* card 1 */}
                             <div className='group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
                                 <img

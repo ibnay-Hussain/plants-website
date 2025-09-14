@@ -7,10 +7,6 @@ Swiper.use([Pagination, Autoplay]);
 
 export default class Review extends Component {
 
-    constructor() {
-        super();
-    }
-
     componentDidMount() {
         this.swiper = new Swiper('.swiper', {
             breakpoints: {
@@ -36,8 +32,8 @@ export default class Review extends Component {
 
     render() {
         return (
-            <div>
-                <div id='review' className='py-8 md:py-[4rem] my-6 relative overflow-hidden'>
+            <div >
+                <div id='review' className='py-8 md:py-[4rem] my-6 mb-48 relative overflow-hidden'>
                     <div>
                         <img className='w-[8rem] md:w-[10rem] absolute -top-2 -left-10 ' src="assets/img/leaf-4.png" alt="" />
                     </div>
@@ -138,7 +134,7 @@ export default class Review extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className='swiper-pagination '></div>
+                            <div className='swiper-pagination'></div>
                         </div>
                     </div>
                 </div>

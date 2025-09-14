@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
+
 export default class Navbar extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.state = {
       isOpen: false,
@@ -9,11 +11,11 @@ export default class Navbar extends Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
-  
-  componentWillUnmount(){
+
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
@@ -27,11 +29,11 @@ export default class Navbar extends Component {
   toggleBtn = () => {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
-    }));  
+    }));
   }
 
   closeMenu = () => {
-    this.setState({isOpen: false});
+    this.setState({ isOpen: false });
   }
 
   render() {
@@ -40,26 +42,57 @@ export default class Navbar extends Component {
         <div id="navbar_parent" className={`fixed w-full top-0 left-0 z-50 h-16 sm:h-20 transition-all duration-[400ms] md:duration-[700ms] ${this.state.isScroll ? 'bg-yellow-500' : 'bg-transparent'}`}>
           <nav id="navbar" className='container flex items-center justify-between py-3'>
             <div className='text-3xl text-white font-medium'>Indoreplants</div>
-            <div id="nav-menu" className={`absolute top-0 w-full min-h-[80vh] bg-green-950/80 z-30 backdrop-blur-sm flex items-center justify-center transition-all duration-[500ms] ${this.state.isOpen ? 'left-[0%]':'left-[-120%]'} lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}>
+            <div id="nav-menu" className={`absolute top-0 w-full min-h-[80vh] bg-green-950/80 z-30 backdrop-blur-sm flex items-center justify-center transition-all duration-[500ms] ${this.state.isOpen ? 'left-[0%]' : 'left-[-120%]'} lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}>
               <ul className='flex flex-col gap-8 lg:gap-10 items-center lg:flex-row'>
                 <li className='text-2xl text-white'>
-                  <a href="/" className="nav-link" onClick={this.closeMenu}>Home</a>
+                  <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? ' underline' : 'text-white'}`
+                  }
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li className='text-2xl text-white'>
-                  <a href="/" className="nav-link" onClick={this.closeMenu}>About</a>
+                  <NavLink
+                    to="/About"
+                    className={({ isActive }) =>
+                      `nav-link ${isActive ? ' underline' : 'text-white'}`
+                    }
+                    onClick={this.closeMenu}
+                  >
+                    About
+                  </NavLink>
                 </li>
                 <li className='text-2xl text-white'>
-                  <a href="/" className="nav-link" onClick={this.closeMenu}>Popular</a>
+                  <NavLink
+                    to="/Popular"
+                    className={({ isActive }) =>
+                      `nav-link ${isActive ? ' underline' : 'text-white'}`
+                    }
+                    onClick={this.closeMenu}
+                  >
+                    Popular
+                  </NavLink>
                 </li>
                 <li className='text-2xl text-white'>
-                  <a href="/" className="nav-link" onClick={this.closeMenu}>Review</a>
+                  <NavLink
+                    to="/Review"
+                    className={({ isActive }) =>
+                      `nav-link ${isActive ? ' underline' : 'text-white'}`
+                    }
+                    onClick={this.closeMenu}
+                  >
+                    Review
+                  </NavLink>
                 </li>
               </ul>
               <div>
-                <img src="/assets/img/leaf-1.png" alt="Leaf1" className='absolute bottom-0 -right-10 w-32 lg:hidden'/>
+                <img src="/assets/img/leaf-1.png" alt="Leaf1" className='absolute bottom-0 -right-10 w-32 lg:hidden' />
               </div>
               <div>
-                <img src="/assets/img/leaf-2.png" alt="Leaf2" className='absolute -top-10 -left-10 w-32 rotate-90 lg:hidden'/>
+                <img src="/assets/img/leaf-2.png" alt="Leaf2" className='absolute -top-10 -left-10 w-32 rotate-90 lg:hidden' />
               </div>
             </div>
             <div className='z-40'>

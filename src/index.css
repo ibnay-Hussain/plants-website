@@ -26,7 +26,7 @@ h2 {
 }
 
 .nav-link {
-  @apply text-white hover:underline hover:text-yellow-400 transition duration-300 text-sm lg:text-lg font-bold;
+  @apply  hover:underline hover:text-yellow-400 transition duration-300 text-sm lg:text-lg font-bold;
 }
 
 .btn {

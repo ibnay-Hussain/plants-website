@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Popular extends Component {
     render() {
         return (
-            <div className='py-8 md:py-[2rem] bg-green-900'>
+            <div className='py-8 md:py-[4rem] bg-green-900'>
                 <div className='container '>
                     <div id='popular' className=' flex flex-col gap-12'>
                         <div className='flex flex-col items-center justify-center'>

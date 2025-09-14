@@ -30,7 +30,7 @@ export default class ScrollUp extends Component {
             <div>
                 <a
                     className={`fixed ${this.state.scroll ? 'bottom-4' : '-bottom-1/2'} right-4 px-2 py-1 md:px-3 md:py-2 text-xl rounded-md  bg-yellow-500 hover:-translate-y-1 duration-300 inline-block z-50 cursor-pointer`}
-                    href='#'
+                    href='/'
                 >
                     <i className='ri-arrow-up-line'></i>
                 </a>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class About extends Component {
     render() {
         return (
-            <div className='about-us py-8 md:py-[2rem] relative overflow-hidden'>
+            <div className='about-us py-8 md:py-[4rem] relative overflow-hidden'>
                 <div>
                     <img className='w-[8rem] md:w-[10rem] absolute -top-2 -right-10 ' src="assets/img/leaf-3.png" alt="" />
                 </div>

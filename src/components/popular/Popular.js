@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+import sr from '../../utils/ScrollReveal'
 
 export default class Popular extends Component {
+
+    componentDidMount() {
+        sr.reveal('.popular_card',{origin:'top'});
+    }
+
     render() {
         return (
             <div className='py-8 md:py-[4rem] bg-green-900'>
@@ -10,9 +16,9 @@ export default class Popular extends Component {
                             <h1 className='title'>Your Choice Plant</h1>
                             <p className='font-lobster text-slate-300'>Follow instructions for more</p>
                         </div>
-                        <div className='mt-24 lg:my-36 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-48 lg:gap-8'>
+                        <div className=' mt-36 md:mt-24 lg:my-36 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-48 lg:gap-8'>
                             {/* card 1 */}
-                            <div className='group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
+                            <div className='popular_card !opacity-100  group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
                                 <img
                                     className='absolute -top-[70%] left-1/2 translate-x-[-50%] w-[16rem] transition-all group-hover:-top-[80%] duration[10000ms]'
                                     src='assets/img/cart-1.png'
@@ -37,7 +43,7 @@ export default class Popular extends Component {
                                 </div>
                             </div>
                             {/* card 2 */}
-                            <div className='group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
+                            <div className='popular_card !opacity-100 group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
                                 <img
                                     className='absolute -top-[70%] left-1/2 translate-x-[-50%] w-[16rem] transition-all group-hover:-top-[80%] duration[10000ms]'
                                     src='assets/img/cart-2.png'
@@ -62,7 +68,7 @@ export default class Popular extends Component {
                                 </div>
                             </div>
                             {/* card 3 */}
-                            <div className='group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
+                            <div className='popular_card !opacity-100 group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
                                 <img
                                     className='absolute -top-[70%] left-1/2 translate-x-[-50%] w-[16rem] transition-all group-hover:-top-[80%] duration[10000ms]'
                                     src='assets/img/cart-3.png'
@@ -87,7 +93,7 @@ export default class Popular extends Component {
                                 </div>
                             </div>
                             {/* card 4 */}
-                            <div className='group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
+                            <div className='popular_card !opacity-100 group flex flex-col gap-2 p-10 pb-4 pt-24 bg-green-950 rounded-md relative border border-transparent hover:border-yellow-500 duration-500 hover:shadow-2xl will-change-transform'>
                                 <img
                                     className='absolute -top-[70%] left-1/2 translate-x-[-50%] w-[16rem] transition-all group-hover:-top-[80%] duration[10000ms]'
                                     src='assets/img/cart-4.png'
